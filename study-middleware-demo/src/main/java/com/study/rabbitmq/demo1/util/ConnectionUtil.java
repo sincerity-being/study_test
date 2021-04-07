@@ -1,4 +1,4 @@
-package com.study.rabbitmq.util;/**
+package com.study.rabbitmq.demo1.util;/**
  * Copyright(c) Beijing Kungeek Science & Technology Ltd.
  */
 

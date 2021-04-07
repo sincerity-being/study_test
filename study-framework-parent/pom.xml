@@ -10,6 +10,8 @@
     <modules>
         <module>../study-java-minidemo</module>
         <module>../study-web-book</module>
+        <module>../study-middle-producer-project</module>
+        <module>../study-middle-consumer-project</module>
     </modules>
     <name>study-framework-parent</name>
     <description>学习时的测试demo</description>

@@ -1,0 +1,14 @@
+spring:
+  rabbitmq:
+    virtual-host: /itcast
+    # 路径(192.168.xx.xx)
+    host: 123.57.26.245
+    port: 5672
+    username: heima
+    password: 123456
+    listener:
+      simple:
+         # 初始化并发数量
+        concurrency: 10
+        # 设置并发最大数量
+        max-concurrency: 20

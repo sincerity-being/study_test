@@ -4,7 +4,8 @@ package com.study.rabbitmq.demo1;/**
 
 
 import com.rabbitmq.client.*;
-import com.study.rabbitmq.util.ConnectionUtil;
+import com.study.rabbitmq.demo1.util.ConnectionUtil;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -23,11 +24,12 @@ import java.util.concurrent.TimeoutException;
  *    修改后版本:     修改人：  修改日期:     修改内容:
  * </pre>
  */
+@Slf4j
 public class Consumer {
 
     public static void main(String[] args) throws IOException, TimeoutException {
-        Connection connection = ConnectionUtil.getConnection();
 
+        Connection connection = ConnectionUtil.getConnection();
         // 创建 频道
         Channel channel = connection.createChannel();
 
@@ -56,15 +58,28 @@ public class Consumer {
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
 
                 //路由key
-                System.out.println("路由key为：" + envelope.getRoutingKey());
+                log.debug("路由key为：" + envelope.getRoutingKey());
                 //交换机
-                System.out.println("交换机为：" + envelope.getExchange());
+                log.debug("交换机为：" + envelope.getExchange());
                 //消息id
-                System.out.println("消息id为：" + envelope.getDeliveryTag());
+                log.debug("消息id为：" + envelope.getDeliveryTag());
                 //收到的消息
-                System.out.println("接收到的消息为：" + new String(body, StandardCharsets.UTF_8));
+                log.debug("接收到的消息为：" + new String(body, StandardCharsets.UTF_8));
             }
         };
+
+        //监听消息
+        /**
+         * 参数1：队列名称
+         * 参数2：是否自动确认，设置为true为表示消息接收到自动向mq回复接收到了，mq接收到回复会删除消息，设置为false则需要手动确认
+         * 参数3：消息接收到后回调
+         */
+        channel.basicConsume(Producer.QUEUE_NAME, true, consumer);
+
+        //不关闭资源，应该一直监听消息
+        //channel.close();
+        //connection.close();
+
 
     }
 }

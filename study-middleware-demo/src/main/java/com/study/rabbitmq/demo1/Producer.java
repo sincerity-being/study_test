@@ -5,8 +5,7 @@ package com.study.rabbitmq.demo1;/**
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.ConnectionFactory;
-import com.study.rabbitmq.util.ConnectionUtil;
+import com.study.rabbitmq.demo1.util.ConnectionUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
