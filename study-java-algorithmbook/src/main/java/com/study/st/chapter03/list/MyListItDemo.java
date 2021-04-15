@@ -1,4 +1,4 @@
-package com.study.st.chapter03;/**
+package com.study.st.chapter03.list;/**
  * Copyright(c) Beijing Kungeek Science & Technology Ltd.
  */
 
@@ -16,7 +16,7 @@ package com.study.st.chapter03;/**
  *    修改后版本:     修改人：  修改日期:     修改内容:
  * </pre>
  */
-public class ListRemoveDemo {
+public class MyListItDemo {
 
 
 }
