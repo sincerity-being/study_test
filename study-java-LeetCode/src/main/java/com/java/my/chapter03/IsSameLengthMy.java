@@ -1,4 +1,4 @@
-package com.java.st.string;/**
+package com.java.my.chapter03;/**
  * Copyright(c) Beijing Kungeek Science & Technology Ltd.
  */
 
@@ -20,39 +20,28 @@ import java.util.Map;
  * 修改记录
  *    修改后版本:     修改人：  修改日期:     修改内容:
  * </pre>
- * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
- *
- * 示例 1:
- *
- * 输入: s = "abcabcbb"
- * 输出: 3
- * 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
- *
  */
 @Slf4j
-public class IsSameLength2 {
+public class IsSameLengthMy {
 
     public int lengthOfLongestSubstring(String s) {
-        int start = 0, end = 0, ans = 0;
-        // 索引值 窗口移动.
+        int start = 0, end, ans = 0;
         Map<Character, Integer> strMap = new HashMap<>(16);
-        for (int i = 0; i < s.length(); i++) {
-            Character c = s.charAt(i);
+        // 利用 hash 的 containsKey 移动 start end end 不断增长 start 随机变化
+        for (end = 0; end < s.length(); end++) {
+            Character c = s.charAt(end);
             if (strMap.containsKey(c)) {
                 start = Math.max(strMap.get(c), start);
             }
-            ans = Math.max(end - start + 1, ans);
-            // 没有就新增 , 有就更新
             strMap.put(c, end + 1);
-            end++;
+            ans = Math.max(end - start + 1, ans);
         }
         return ans;
     }
 
     public static void main(String[] args) {
-        IsSameLength2 isSameLength2 = new IsSameLength2();
-        int ans = isSameLength2.lengthOfLongestSubstring("dvdf");
+        IsSameLengthMy isSameLengthMy = new IsSameLengthMy();
+        int ans = isSameLengthMy.lengthOfLongestSubstring("dvdf");
         log.debug("ans:{}", ans);
     }
-
 }

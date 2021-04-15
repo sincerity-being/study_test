@@ -10,7 +10,6 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath>../study-framework-parent/pom.xml</relativePath>
     </parent>
-    <groupId>com.study</groupId>
     <artifactId>study-java-algorithm</artifactId>
     <version>1.0-SNAPSHOT</version>
 

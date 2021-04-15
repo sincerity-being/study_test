@@ -3,6 +3,10 @@ package com.study.st.chapter03.list;/**
  */
 
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 /**
  * <pre>
  *
@@ -18,5 +22,13 @@ package com.study.st.chapter03.list;/**
  */
 public class MyListItDemo {
 
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<>(10);
+        list.add(1);
+        Iterator<Integer> iterable = list.iterator();
+        while (iterable.hasNext()) {
+            System.out.println(iterable.next());
+        }
+    }
 
 }

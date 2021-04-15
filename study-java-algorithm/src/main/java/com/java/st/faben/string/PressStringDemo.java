@@ -1,4 +1,4 @@
-package com.study.faben.string;
+package com.java.st.faben.string;
 import java.util.Scanner;
 
 /**
