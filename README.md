@@ -18,7 +18,7 @@
 
 + 之前 在 origin  git@gitee.com:hyq1314/study_test.git
 
-+ 2022-1-31 现在 origin
++ 2022-1-31 现在 origin git@github.com:sincerity-being/study_test.git
 
 
 
