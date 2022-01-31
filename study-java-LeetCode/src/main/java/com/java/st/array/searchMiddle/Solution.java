@@ -75,4 +75,12 @@ public class Solution {
         }
     }
 
+    public static void main(String[] args) {
+        int[] num1 = new int[]{1};
+        int[] num2 = new int[]{2,3};
+        double medianSortedArrays = new Solution().findMedianSortedArrays(num1, num2);
+        System.out.println("medianSortedArrays" + medianSortedArrays);
+
+    }
+
 }

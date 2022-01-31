@@ -13,6 +13,7 @@
         <module>../study-middle-producer-project</module>
         <module>../study-middle-consumer-project</module>
         <module>../study-java-algorithmbook</module>
+        <module>../study-test-code</module>
     </modules>
     <name>study-framework-parent</name>
     <description>学习时的测试demo</description>

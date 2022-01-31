@@ -14,4 +14,11 @@
 * 前端 : Vue + Element-UI
 * 后端 ： SpringBoot + SpringCloud + SpringMVC + SpringData
 
+## 版本变化
+
++ 之前 在 origin  git@gitee.com:hyq1314/study_test.git
+
++ 2022-1-31 现在 origin
+
+
 
