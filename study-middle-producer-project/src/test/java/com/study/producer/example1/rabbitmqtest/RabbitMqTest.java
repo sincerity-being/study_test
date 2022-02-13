@@ -3,7 +3,7 @@ package com.study.producer.example1.rabbitmqtest;/**
  */
 
 
-import com.study.thread.config.RabbitMqConfig;
+import com.study.producer.example1.config.RabbitMqConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
