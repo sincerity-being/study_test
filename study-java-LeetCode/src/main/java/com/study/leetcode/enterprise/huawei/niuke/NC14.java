@@ -12,6 +12,28 @@ import java.util.Map;
 public class NC14 {
 
     public static void main(String[] args) {
+      //  testHashMap();
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+    private static void testHashMap() {
         Map<Integer, String> map = new HashMap<>(16);
         map.put(1,"123");
         map.put(1, "1234");
