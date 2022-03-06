@@ -1,4 +1,4 @@
-package com.study.leetcode.enterprise.huawei.niuke;
+package com.study.leetcode.enterprise.huawei.niuke.exam;
 
 import java.util.*;
 import java.util.stream.Collectors;

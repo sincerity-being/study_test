@@ -1,4 +1,4 @@
-package com.study.basic.oop.example8;
+package com.study.basic.oop.example8.sample;
 
 /**
  * @author HeYQ
@@ -7,4 +7,6 @@ package com.study.basic.oop.example8;
  * @describe
  */
 public interface Service {
+    void method1();
+    void method2();
 }
