@@ -1,6 +1,6 @@
 package com.study.leetcode.util;
 
-import com.study.leetcode.enterprise.huawei.niuke.pra.domain.TreeNode;
+import com.study.leetcode.datastruct.TreeNode;
 
 import java.util.LinkedList;
 

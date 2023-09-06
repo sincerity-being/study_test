@@ -1,0 +1,35 @@
+问题：
+    1.Exception和Error的区别
+    2.运行时异常和一般异常的区别
+    3.写出几种常见的运行时异常
+	4.int和Integer的区别
+
+标准回答：
+  1.Exception和Error的区别
+    Exception和Error都继承自Throwable，在Java中只有Throwable类型的实例才可以被抛出或捕获。
+    Error指正常情况下不太可能出现的情况，绝大部分的Error或导致程序崩溃，处于非正常的不可恢复的状态，
+        如OutOfMemoryError、StackOverflowError。
+        是程序中不应该试图捕获的严重问题。
+    Exception是程序正常运行中可以预料的意外情况，可以捕获并处理。
+
+  2.运行时异常和一般异常的区别
+    受检查异常：在编译时被强制检查的异常。在方法的声明中声明的异常。
+            (举例：ClassNotFoundException、IOException)
+    不受检查异常：不受检查异常通常是在编码中可以避免的逻辑错误，根据需求来判断如何处理，不需要再编译期强制要求。
+
+  3.写出几种常见的运行时异常(考察编程经验)
+    运行时异常RuntimeException是所有不受检查异常的基类。
+    NullPointerException、ClassCastException、NumberFormatException、IndexOutOfBoundsException。
+
+
+  4.int和Integer的区别
+    int是整型，是java的8中基本数据类型之一。
+    Integer是int对应的包装类，它有一个final修饰的int字段，并提供了数学运算、字int和字符串之间转换等常用的方法。
+    Integer和String一样，也是不可变类型。
+    查看源码可发现，在java5之后，valueOf方法使用了一个缓存机制，默认缓存是-128到127。
+    在创建这个范围的整数时，不需要new新对象，而是使用缓存，提高性能
+    缓存在Boolean,Short,Byte和Character中同样存在。
+    把基本数据类型转换成包装类型是装箱(boxing)，把包装类型转换成基本类型是拆箱(unboxing)。
+    Java中有自动装箱和拆箱的功能。但在性能敏感的场合，尽量避免无意义的拆箱、装箱行为。
+    另外，原始数据类型int不能和java泛型结合使用，原始数据类型是线程不安全的。
+
