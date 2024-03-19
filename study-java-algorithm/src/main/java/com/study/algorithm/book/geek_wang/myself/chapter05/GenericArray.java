@@ -1,5 +1,11 @@
-package com.study.algorithm.book.geek_wang.teacher.array;
+package com.study.algorithm.book.geek_wang.myself.chapter05;
 
+/**
+ * @author HeYQ
+ * @version 1.0
+ * @date 2023-09-11 15:29
+ * @describe
+ */
 public class GenericArray<T> {
     private T[] data;
     private int size;

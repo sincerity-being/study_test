@@ -7,9 +7,9 @@ package com.study.leetcode.datastruct;
  * @describe
  */
 public class TreeNode {
-    private int val = 0;
-    private TreeNode left = null;
-    private TreeNode right = null;
+    public int val = 0;
+    public TreeNode left = null;
+    public TreeNode right = null;
 
     public int getVal() {
         return val;
@@ -37,5 +37,11 @@ public class TreeNode {
 
     public TreeNode(int val){
         this.val = val;
+    }
+
+    public TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
 }
